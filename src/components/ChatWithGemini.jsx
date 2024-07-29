@@ -34,6 +34,7 @@ const ChatWithGemini = () => {
 
     return (
         <>
+        <h1 className=" text-slate-300 text-xl font-bold p-4">Care Clue</h1>
             <Box className="w-[100%] self-center max-w-[1400px] m-4 overflow-auto rounded-md h-[80%] items-center">
                 <Box className="overflow-auto px-10 py-4 flex flex-col">
                     {messages.length > 0 ? messages.map((message, index) => <RenderMessage loading={loading} key={index + message.role} messageLength={messages.length} message={message} msgIndex={index} />) :
@@ -96,8 +97,8 @@ const Introduction = () => {
 
     return <Box className="flex flex-col items-center justify-center">
         <Box className="flex flex-col items-center justify-center">
-            <TextRenderer value="Welcome to Gemini AI" size="xxx-large" />
-            <TextRenderer value="I'm Gemini, a chatbot that can help you with your queries" direction={'l'} />
+            <TextRenderer value="Welcome to Care Clue" size="xxx-large" />
+            <TextRenderer value="I'm a chatbot, Your Virtual health assistant" direction={'l'} />
         </Box>
         <Box className="flex flex-col items-center justify-center">
             <TextRenderer value="Type a message to get started" />
@@ -120,14 +121,15 @@ const RenderMessage = ({ message, msgIndex, loading, messageLength }) => {
             <>
                 <Box
                     as={motion.div}
-                    className={`flex overflow-auto max-w-[95%]  md:max-w-[96%] w-fit items-end my-2 p-1 px-2 rounded-md ${role === 'user' ? 'self-end' : 'self-start'}`}
-                    bgColor={role === 'user' ? 'blue.500' : 'gray.200'}
-                    textColor={role === 'user' ? 'white' : 'black'}
+                    className={`flex overflow-auto max-w-[60%]  md:max-w-[60%] w-fit items-end my-2 p-3 px-2 rounded-r-lg rounded-tl-lg ${role === 'user' ? 'self-end' : 'self-start'}`}
+                    bgColor={role === 'user' ? 'blue.500' : 'gray.600'}
+                    textColor={role === 'user' ? 'white' : 'white'}
                     initial={{ opacity: 0, scale: 0.5, y: 20, x: role === 'user' ? 20 : -20 }}
                     animate={{ opacity: 1, scale: 1, y: 0, x: 0 }}
                     key={index}
                 >
                     <ReactMarkdown
+
                         className="text-sm"
                         key={index + part.text}
                         components={{
