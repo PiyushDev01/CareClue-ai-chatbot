@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI, } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { config } from "../utils/config";
 
 const GeminiService = (function () {
