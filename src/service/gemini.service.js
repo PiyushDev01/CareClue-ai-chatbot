@@ -1,10 +1,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { config } from "../utils/config";
 
 const GeminiService = (function () {
 
     const MODEL_NAME = "gemini-pro";
-    const API_KEY = "AIzaSyB4qWgvC1waLiVLR14AVJwfs3HhSfv1rxk";
+    const API_KEY = import.meta.env.VITE_APP_BOT_API_KEY;
     const genAI = new GoogleGenerativeAI(API_KEY);
     const service = {};
 

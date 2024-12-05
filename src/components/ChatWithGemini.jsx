@@ -36,15 +36,15 @@ const ChatWithGemini = () => {
         <>
         <h1 className=" text-slate-300 text-xl font-bold p-4">Care Clue</h1>
             <Box className="w-[100%] self-center max-w-[1400px] m-4 overflow-auto rounded-md h-[80%] items-center">
-                <Box className="overflow-auto px-10 py-4 flex flex-col">
+                <Box className="overflow-auto md:px-10 px-1 md:py-4 flex flex-col">
                     {messages.length > 0 ? messages.map((message, index) => <RenderMessage loading={loading} key={index + message.role} messageLength={messages.length} message={message} msgIndex={index} />) :
                         <Introduction />
                     }
                     <AlwaysScrollToBottom />
                 </Box>
             </Box>
-            <Box className="flex max-w-[1400px] px-10 pt-2 w-[100%] self-center">
-                <Box className="flex w-[100%] gap-2 justify-between items-center">
+            <Box className="flex max-w-[1400px] md:px-10 px-1 md:pt-2 w-[100%] self-center">
+                <Box className="flex flex-col md:flex-row w-[100%] gap-2 justify-between items-center">
                     <Textarea
                         placeholder="Type a message"
                         value={input || ""}
@@ -65,7 +65,7 @@ const ChatWithGemini = () => {
                         }}
                         variant={'unstyled'}
                     />
-                    <Box className="flex gap-2 flex-col">
+                    <Box className="flex gap-2 md:flex-col">
                         <Button colorScheme="whatsapp" h="1.75rem" size="sm" onClick={handleSend} rightIcon={<ArrowForwardIcon />}>
                             Send
                         </Button>
