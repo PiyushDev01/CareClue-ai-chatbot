@@ -98,10 +98,7 @@ const Introduction = () => {
     return <Box className="flex flex-col items-center justify-center">
         <Box className="flex flex-col items-center justify-center">
             <TextRenderer value="Welcome to Care Clue" size="xxx-large" />
-            <TextRenderer value="I'm a chatbot, Your Virtual health assistant" direction={'l'} />
-        </Box>
-        <Box className="flex flex-col items-center justify-center">
-            <TextRenderer value="Type a message to get started" />
+            <TextRenderer value="Your Virtual Health Companion, Guiding You to Better Well-being" direction={'l'} />
         </Box>
     </Box>
 }
