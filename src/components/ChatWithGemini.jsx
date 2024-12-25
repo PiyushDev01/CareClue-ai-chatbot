@@ -153,8 +153,8 @@ const RenderMessage = ({ message, msgIndex, loading, messageLength }) => {
       <>
         <Box
           as={motion.div}
-          className={`flex w-full max-w-[100%] items-end my-2 p-3 px-4 rounded-lg ${
-            role === "user" ? "self-end text-right" : "self-start text-left"
+          className={`flex w-fit max-w-[100%] items-end my-2 p-3 px-4  ${
+            role === "user" ? "self-end justify-end rounded-l-2xl rounded-t-2xl " : " rounded-r-2xl rounded-t-2xl self-start justify-start"
           }`}
           bgColor={role === "user" ? "blue.500" : "gray.600"}
           textColor="white"
